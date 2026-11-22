@@ -4,7 +4,7 @@ Instructions for coding agents working in this repository. Keep this file curren
 
 ## Project
 
-admiral is a multi-cluster management platform for Kubernetes, written in Rust, built as a drop-in replacement for Rancher. The design is in `docs/design.md`; its section 10 is the phased plan, and each task there is one issue in the GitHub Project.
+admiral is a multi-cluster management platform for Kubernetes, written in Rust, built as a drop-in replacement for Rancher. The design is in `docs/design.md`; its section 10 is the phased plan, and each task there is one issue in the GitHub Project. Implementation plans per phase are in `docs/plans/`, starting with `docs/plans/p1-mvp-see-and-control.md`.
 
 There is no code yet. Phase 1, task 1 creates the Cargo workspace; update the commands and layout below when it lands.
 
