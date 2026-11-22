@@ -1,0 +1,80 @@
+name: Bug report
+description: Something does not work as described
+labels: ["bug", "needs triage"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for reporting. Never paste tokens, kubeconfig files or provider secrets here; redact them from any output.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you saw, including any error message.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Import a k3s cluster
+        2. Open the explorer and search for `kind:Pod`
+        3. ...
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: admiral version
+      description: Output of `admiral version`.
+    validations:
+      required: true
+  - type: dropdown
+    id: install
+    attributes:
+      label: How admiral is installed
+      options:
+        - Binary
+        - Container image
+        - Helm chart
+        - Built from source
+    validations:
+      required: true
+  - type: input
+    id: clusters
+    attributes:
+      label: Clusters involved
+      description: Distribution and version of each managed cluster that matters.
+      placeholder: k3s v1.34.2, EKS 1.33, flotilla 0.1.0
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Server or API
+        - Agent or tunnel
+        - Search and explorer
+        - Sign-in and access
+        - Web UI
+        - CLI
+        - Migration from Rancher
+        - Other
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Server or agent logs around the problem, with secrets removed.
+      render: shell
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot
+      description: Drag an image here if the problem is in the web UI.
