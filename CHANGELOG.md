@@ -5,3 +5,4 @@ All notable changes to admiral are listed here. The format follows [Keep a Chang
 ## Unreleased
 
 - Design, feature matrix and phased plan in `docs/design.md`.
+- Contributor guide, code of conduct, security policy with private reporting, and issue and pull request templates.
